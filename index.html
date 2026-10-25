@@ -8,37 +8,170 @@
 </head>
 <body>
 
+  <!-- Encabezado / Navegación -->
   <header>
     <div class="logo">WebsiteStore</div>
     <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#portfolio">Ejemplos</a>
       <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#contacto" class="btn-nav">Contacto</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Transformamos tu negocio con sitios web modernos</h1>
-    <p>Diseño rápido, optimizado y pensado para atraer más clientes.</p>
-    <a href="#contacto" class="btn">Solicitar Presupuesto</a>
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <h1>Impulsa tu negocio con sitios web de alto rendimiento</h1>
+    <p>Creamos experiencias digitales rápidas, modernas y adaptadas para convertir visitantes en clientes reales.</p>
+    <div class="hero-buttons">
+      <a href="#portfolio" class="btn btn-primary">Ver Ejemplos</a>
+      <a href="#contacto" class="btn btn-secondary">Pedir Presupuesto</a>
+    </div>
   </section>
 
-  <section id="servicios" class="servicios">
-    <h2>Nuestros Servicios</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Landing Pages</h3>
-        <p>Páginas de alta conversión para marcas y comercios.</p>
+  <!-- Sección de Filtros / Ejemplos de Páginas (Portfolio) -->
+  <section id="portfolio" class="portfolio">
+    <h2>Nuestros Trabajos y Ejemplos</h2>
+    <p class="subtitle">Explora algunos estilos de páginas que podemos desarrollar para tu marca:</p>
+    
+    <!-- Botones de Filtro -->
+    <div class="filter-buttons">
+      <button class="filter-btn active" onclick="filterSelection('all')">Todos</button>
+      <button class="filter-btn" onclick="filterSelection('tiendas')">E-commerce / Tiendas</button>
+      <button class="filter-btn" onclick="filterSelection('landing')">Landing Pages</button>
+      <button class="filter-btn" onclick="filterSelection('corporativo')">Sitios Corporativos</button>
+    </div>
+
+    <!-- Grilla de Proyectos / Ejemplos -->
+    <div class="portfolio-grid">
+      <div class="portfolio-card tiendas">
+        <div class="card-img">🛍️ Tienda Streetwear</div>
+        <div class="card-content">
+          <h3>E-commerce Moda Urbana</h3>
+          <p>Catálogo de productos, carrito y diseño moderno estilo Y2K.</p>
+          <a href="#contacto" class="card-link">Solicitar similar →</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Sitios Institucionales</h3>
-        <p>Presencia profesional para pymes y emprendimientos.</p>
+
+      <div class="portfolio-card landing">
+        <div class="card-img">🚀 Landing Page</div>
+        <div class="card-content">
+          <h3>Captación de Clientes</h3>
+          <p>Sitio optimizado para conversiones rápidas y llamadas a la acción.</p>
+          <a href="#contacto" class="card-link">Solicitar similar →</a>
+        </div>
+      </div>
+
+      <div class="portfolio-card corporativo">
+        <div class="card-img">🏢 Web Institucional</div>
+        <div class="card-content">
+          <h3>Empresa de Servicios</h3>
+          <p>Diseño formal, sección de equipo, servicios y blog integrado.</p>
+          <a href="#contacto" class="card-link">Solicitar similar →</a>
+        </div>
+      </div>
+
+      <div class="portfolio-card tiendas">
+        <div class="card-img">🍔 Gastronomía & Delivery</div>
+        <div class="card-content">
+          <h3>Web para Restaurantes</h3>
+          <p>Menú digital interactivo, reservas y conexión directa a WhatsApp.</p>
+          <a href="#contacto" class="card-link">Solicitar similar →</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer id="contacto">
+  <!-- Servicios y Paquetes -->
+  <section id="servicios" class="servicios">
+    <h2>Paquetes y Soluciones</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Landing Page Básica</h3>
+        <p class="price">$120 USD</p>
+        <p>Ideal para profesionales y marcas que recién empiezan.</p>
+        <ul>
+          <li>✓ 1 Página optimizada</li>
+          <li>✓ Diseño adaptable a celulares</li>
+          <li>✓ Botón de WhatsApp integrado</li>
+        </ul>
+      </div>
+      <div class="card highlight">
+        <h3>E-commerce / Tienda</h3>
+        <p class="price">$250 USD</p>
+        <p>Para negocios que quieren vender productos online.</p>
+        <ul>
+          <li>✓ Catálogo autogestionable</li>
+          <li>✓ Pasarela de pagos y envíos</li>
+          <li>✓ Dominio y hosting optimizado</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto" class="contacto">
+    <h2>Hablemos de tu Proyecto</h2>
+    <p>¿Listo para llevar tu negocio al siguiente nivel digital? Escríbenos y te respondemos hoy mismo.</p>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI">
+      <input type="text" name="name" placeholder="Tu Nombre o Empresa" required>
+      <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+      <textarea name="message" rows="4" placeholder="Cuéntanos qué tipo de página necesitas..." required></textarea>
+      <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+    </form>
+  </section>
+
+  <footer>
     <p>&copy; 2026 WebsiteStore. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- Script simple para hacer funcionar los filtros -->
+  <script>
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("portfolio-card");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+      }
+      
+      // Cambiar botón activo
+      var btns = document.getElementsByClassName("filter-btn");
+      for (i = 0; i < btns.length; i++) {
+        btns[i].classList.remove("active");
+      }
+      event.currentTarget.classList.add("active");
+    }
+
+    function AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+          element.className += " " + arr2[i];
+        }
+      }
+    }
+
+    function RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+    // Mostrar todos por defecto al cargar
+    window.onload = function() {
+      filterSelection('all');
+    }
+  </script>
 </body>
 </html>
