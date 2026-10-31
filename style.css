@@ -26,7 +26,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Ambient Subtle Glow */
+/* Glow superior sutil */
 .glow-top {
     position: absolute;
     top: -120px;
@@ -210,7 +210,7 @@ nav a:hover {
     margin-bottom: 3.5rem;
 }
 
-/* Hero Gallery Showcase */
+/* Galería del Hero */
 .hero-gallery {
     display: grid;
     grid-template-columns: 1fr 1.3fr 1fr;
@@ -247,7 +247,7 @@ nav a:hover {
     filter: grayscale(0%);
 }
 
-/* Portfolio / Examples Section (Garantizado 3 en línea) */
+/* Sección de Ejemplos (3 en línea estricto) */
 .section {
     padding: 5rem 5%;
     max-width: 1300px;
@@ -335,7 +335,7 @@ nav a:hover {
     flex-grow: 1;
 }
 
-/* Services Section */
+/* Servicios */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -379,7 +379,7 @@ nav a:hover {
     font-size: 0.95rem;
 }
 
-/* Contact & Consultation Section */
+/* Sección de Contacto */
 .contact-box {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -444,7 +444,7 @@ footer {
     color: var(--text-main);
 }
 
-/* Responsive Design */
+/* Adaptación a dispositivos móviles */
 @media (max-width: 900px) {
     .portfolio-grid {
         grid-template-columns: 1fr;
