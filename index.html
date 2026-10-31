@@ -1,177 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WebsiteStore | Desarrollo Web Profesional</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStore | Sitios Web & Agencia IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Encabezado / Navegación -->
-  <header>
-    <div class="logo">WebsiteStore</div>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#portfolio">Ejemplos</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto" class="btn-nav">Contacto</a>
-    </nav>
-  </header>
+    <div class="glow-top"></div>
 
-  <!-- Hero Section -->
-  <section id="inicio" class="hero">
-    <h1>Impulsa tu negocio con sitios web de alto rendimiento</h1>
-    <p>Creamos experiencias digitales rápidas, modernas y adaptadas para convertir visitantes en clientes reales.</p>
-    <div class="hero-buttons">
-      <a href="#portfolio" class="btn btn-primary">Ver Ejemplos</a>
-      <a href="#contacto" class="btn btn-secondary">Pedir Presupuesto</a>
-    </div>
-  </section>
+    <!-- Header / Navbar -->
+    <header>
+        <a href="#" class="logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#e50914" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 16l4-4-4-4M8 8l-4 4 4 4M14 4l-4 16"/>
+            </svg>
+            Web<span>Store</span>
+        </a>
 
-  <!-- Sección de Filtros / Ejemplos de Páginas (Portfolio) -->
-  <section id="portfolio" class="portfolio">
-    <h2>Nuestros Trabajos y Ejemplos</h2>
-    <p class="subtitle">Explora algunos estilos de páginas que podemos desarrollar para tu marca:</p>
-    
-    <!-- Botones de Filtro -->
-    <div class="filter-buttons">
-      <button class="filter-btn active" onclick="filterSelection('all')">Todos</button>
-      <button class="filter-btn" onclick="filterSelection('tiendas')">E-commerce / Tiendas</button>
-      <button class="filter-btn" onclick="filterSelection('landing')">Landing Pages</button>
-      <button class="filter-btn" onclick="filterSelection('corporativo')">Sitios Corporativos</button>
-    </div>
+        <nav>
+            <a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a>
+            <a href="#ejemplos" data-es="Ejemplos" data-en="Examples">Ejemplos</a>
+            <a href="#servicios" data-es="Servicios IA" data-en="AI Services">Servicios IA</a>
+            <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+        </nav>
 
-    <!-- Grilla de Proyectos / Ejemplos -->
-    <div class="portfolio-grid">
-      <div class="portfolio-card tiendas">
-        <div class="card-img">🛍️ Tienda Streetwear</div>
-        <div class="card-content">
-          <h3>E-commerce Moda Urbana</h3>
-          <p>Catálogo de productos, carrito y diseño moderno estilo Y2K.</p>
-          <a href="#contacto" class="card-link">Solicitar similar →</a>
+        <div class="header-actions">
+            <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">EN</button>
+            <a href="#contacto" class="btn-primary" data-es="Pedir Presupuesto" data-en="Get a Quote">Pedir Presupuesto</a>
         </div>
-      </div>
+    </header>
 
-      <div class="portfolio-card landing">
-        <div class="card-img">🚀 Landing Page</div>
-        <div class="card-content">
-          <h3>Captación de Clientes</h3>
-          <p>Sitio optimizado para conversiones rápidas y llamadas a la acción.</p>
-          <a href="#contacto" class="card-link">Solicitar similar →</a>
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="badge">
+            <span class="badge-dot"></span>
+            <span data-es="Agencia Digital Automatizada por IA" data-en="AI-Automated Digital Agency">Agencia Digital Automatizada por IA</span>
         </div>
-      </div>
-
-      <div class="portfolio-card corporativo">
-        <div class="card-img">🏢 Web Institucional</div>
-        <div class="card-content">
-          <h3>Empresa de Servicios</h3>
-          <p>Diseño formal, sección de equipo, servicios y blog integrado.</p>
-          <a href="#contacto" class="card-link">Solicitar similar →</a>
+        <h1 data-es="Impulsa tu Negocio con Sitios Web y Gestión IA" data-en="Scale Your Business with Websites & AI Management">Impulsa tu Negocio con Sitios Web y Gestión IA</h1>
+        <p data-es="Creamos experiencias web ultra rápidas y desplegamos agentes de Inteligencia Artificial para automatizar tus redes sociales, contenido y atención al cliente." data-en="We build ultra-fast web experiences and deploy Artificial Intelligence agents to automate your social media, content creation, and customer service.">Creamos experiencias web ultra rápidas y desplegamos agentes de Inteligencia Artificial para automatizar tus redes sociales, contenido y atención al cliente.</p>
+        <div class="hero-buttons">
+            <a href="#ejemplos" class="btn-primary" data-es="Ver Trabajos" data-en="View Our Work">Ver Trabajos</a>
+            <a href="#contacto" class="btn-secondary" data-es="Hablar con un Asesor" data-en="Talk with an Advisor">Hablar con un Asesor</a>
         </div>
-      </div>
+    </section>
 
-      <div class="portfolio-card tiendas">
-        <div class="card-img">🍔 Gastronomía & Delivery</div>
-        <div class="card-content">
-          <h3>Web para Restaurantes</h3>
-          <p>Menú digital interactivo, reservas y conexión directa a WhatsApp.</p>
-          <a href="#contacto" class="card-link">Solicitar similar →</a>
+    <!-- Portfolio / Examples Section -->
+    <section class="section" id="ejemplos">
+        <div class="section-header">
+            <h2 data-es="Soluciones por Sector de Negocio" data-en="Solutions by Business Sector">Soluciones por Sector de Negocio</h2>
+            <p data-es="Descubre cómo adaptamos el diseño web y los sistemas de IA para cada industria." data-en="Discover how we tailor web design and AI systems for every industry.">Descubre cómo adaptamos el diseño web y los sistemas de IA para cada industria.</p>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Servicios y Paquetes -->
-  <section id="servicios" class="servicios">
-    <h2>Paquetes y Soluciones</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Landing Page Básica</h3>
-        <p class="price">$120 USD</p>
-        <p>Ideal para profesionales y marcas que recién empiezan.</p>
-        <ul>
-          <li>✓ 1 Página optimizada</li>
-          <li>✓ Diseño adaptable a celulares</li>
-          <li>✓ Botón de WhatsApp integrado</li>
-        </ul>
-      </div>
-      <div class="card highlight">
-        <h3>E-commerce / Tienda</h3>
-        <p class="price">$250 USD</p>
-        <p>Para negocios que quieren vender productos online.</p>
-        <ul>
-          <li>✓ Catálogo autogestionable</li>
-          <li>✓ Pasarela de pagos y envíos</li>
-          <li>✓ Dominio y hosting optimizado</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+        <div class="portfolio-grid">
+            <!-- Item 1: Streetwear & E-Commerce -->
+            <div class="portfolio-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80" alt="Streetwear Store" class="portfolio-img">
+                <div class="portfolio-content">
+                    <span class="portfolio-tag" data-es="Moda & E-Commerce" data-en="Fashion & E-Commerce">Moda & E-Commerce</span>
+                    <h3 data-es="Tiendas de Ropa / Streetwear" data-en="Apparel & Streetwear Stores">Tiendas de Ropa / Streetwear</h3>
+                    <p data-es="Catálogos de alta velocidad visual, pasarelas de pago y generación automática de posts para Instagram con fotos de productos." data-en="High-speed visual storefronts, checkout integrations, and automated Instagram post generation for new drops.">Catálogos de alta velocidad visual, pasarelas de pago y generación automática de posts para Instagram con fotos de productos.</p>
+                </div>
+            </div>
 
-  <!-- Sección de Contacto -->
-  <section id="contacto" class="contacto">
-    <h2>Hablemos de tu Proyecto</h2>
-    <p>¿Listo para llevar tu negocio al siguiente nivel digital? Escríbenos y te respondemos hoy mismo.</p>
-    <form action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI">
-      <input type="text" name="name" placeholder="Tu Nombre o Empresa" required>
-      <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
-      <textarea name="message" rows="4" placeholder="Cuéntanos qué tipo de página necesitas..." required></textarea>
-      <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-    </form>
-  </section>
+            <!-- Item 2: Corporate & Services -->
+            <div class="portfolio-card">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Corporate Web" class="portfolio-img">
+                <div class="portfolio-content">
+                    <span class="portfolio-tag" data-es="Empresas & Agencias" data-en="Corporate & Agencies">Empresas & Agencias</span>
+                    <h3 data-es="Sitios Institucionales" data-en="Corporate Websites">Sitios Institucionales</h3>
+                    <p data-es="Presencia corporativa elegante con captura automática de clientes potenciales y reportes mensuales generados por IA." data-en="Sleek corporate presence with automated lead capture and monthly executive performance reports generated by AI.">Presencia corporativa elegante con captura automática de clientes potenciales y reportes mensuales generados por IA.</p>
+                </div>
+            </div>
 
-  <footer>
-    <p>&copy; 2026 WebsiteStore. Todos los derechos reservados.</p>
-  </footer>
+            <!-- Item 3: Gastronomy -->
+            <div class="portfolio-card">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Gastronomy" class="portfolio-img">
+                <div class="portfolio-content">
+                    <span class="portfolio-tag" data-es="Gastronomía & Locales" data-en="Gastronomy & Venues">Gastronomía & Locales</span>
+                    <h3 data-es="Restaurantes y Delivery" data-en="Restaurants & Hospitality">Restaurantes y Delivery</h3>
+                    <p data-es="Menú digital interactivo, reservas automatizadas y atención por WhatsApp 24/7 atendida por asistentes de IA." data-en="Interactive digital menu, automated reservations, and 24/7 WhatsApp response powered by AI assistants.">Menú digital interactivo, reservas automatizadas y atención por WhatsApp 24/7 atendida por asistentes de IA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Script simple para hacer funcionar los filtros -->
-  <script>
-    function filterSelection(c) {
-      var x, i;
-      x = document.getElementsByClassName("portfolio-card");
-      if (c == "all") c = "";
-      for (i = 0; i < x.length; i++) {
-        RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
-      }
-      
-      // Cambiar botón activo
-      var btns = document.getElementsByClassName("filter-btn");
-      for (i = 0; i < btns.length; i++) {
-        btns[i].classList.remove("active");
-      }
-      event.currentTarget.classList.add("active");
-    }
+    <!-- AI Services Section -->
+    <section class="section" id="servicios">
+        <div class="section-header">
+            <h2 data-es="¿Qué Automatizan Nuestros Agentes IA?" data-en="What Do Our AI Agents Automate?">¿Qué Automatizan Nuestros Agentes IA?</h2>
+            <p data-es="Infraestructura autónoma diseñada para ahorrarte horas de trabajo diario." data-en="Autonomous infrastructure designed to save you hours of daily work.">Infraestructura autónoma diseñada para ahorrarte horas de trabajo diario.</p>
+        </div>
 
-    function AddClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {
-          element.className += " " + arr2[i];
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3 data-es="Desarrollo Web a Medida" data-en="Custom Web Development">Desarrollo Web a Medida</h3>
+                <p data-es="Sitios optimizados para máxima velocidad de carga, diseño responsive y SEO posicionado." data-en="Websites optimized for maximum loading speed, responsive design, and search engine positioning.">Sitios optimizados para máxima velocidad de carga, diseño responsive y SEO posicionado.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📲</div>
+                <h3 data-es="Publicación en Redes" data-en="Social Media Automation">Publicación en Redes</h3>
+                <p data-es="Creación automática de copys, carruseles y programación de posts en Instagram y Facebook." data-en="Automatic copywriting, graphic carousel creation, and schedule posts on Instagram and Facebook.">Creación automática de copys, carruseles y programación de posts en Instagram y Facebook.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💬</div>
+                <h3 data-es="Atención al Cliente 24/7" data-en="24/7 Customer Support">Atención al Cliente 24/7</h3>
+                <p data-es="Agentes de IA que responden consultas frecuentes y capturan ventas por WhatsApp e Instagram DM." data-en="AI agents that answer FAQs and close leads via WhatsApp and Instagram DMs around the clock.">Agentes de IA que responden consultas frecuentes y capturan ventas por WhatsApp e Instagram DM.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3 data-es="Reportes de Marketing" data-en="Marketing Analytics">Reportes de Marketing</h3>
+                <p data-es="Informes periódicos con métricas clave y recomendaciones estratégicas generados automáticamente." data-en="Automated regular performance summaries featuring key metrics and strategic recommendations.">Informes periódicos con métricas clave y recomendaciones estratégicas generados automáticamente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation & Contact Section -->
+    <section class="section" id="contacto">
+        <div class="contact-box">
+            <h2 data-es="Cotiza tu Proyecto a Medida" data-en="Request a Custom Quote">Cotiza tu Proyecto a Medida</h2>
+            <p data-es="Cada negocio tiene necesidades y presupuestos diferentes. Analizamos tus requerimientos y ajustamos una propuesta personalizada." data-en="Every business has unique requirements and scopes. We analyze your needs and craft a personalized plan.">Cada negocio tiene necesidades y presupuestos diferentes. Analizamos tus requerimientos y ajustamos una propuesta personalizada.</p>
+            <a href="https://wa.me/" target="_blank" class="btn-primary" data-es="Hablar por WhatsApp" data-en="Chat on WhatsApp">Hablar por WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#e50914" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 16l4-4-4-4M8 8l-4 4 4 4M14 4l-4 16"/>
+                </svg>
+                Web<span>Store</span>
+            </div>
+            
+            <div class="footer-credits">
+                Desarrollado y Gestionado por <strong>Ryan Villafan</strong>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Language Toggle -->
+    <script>
+        let currentLang = 'es';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            document.getElementById('langToggle').innerText = currentLang === 'es' ? 'EN' : 'ES';
+
+            const elements = document.querySelectorAll('[data-es]');
+            elements.forEach(el => {
+                el.innerText = el.getAttribute(`data-${currentLang}`);
+            });
         }
-      }
-    }
-
-    function RemoveClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-          arr1.splice(arr1.indexOf(arr2[i]), 1);
-        }
-      }
-      element.className = arr1.join(" ");
-    }
-
-    // Mostrar todos por defecto al cargar
-    window.onload = function() {
-      filterSelection('all');
-    }
-  </script>
+    </script>
 </body>
 </html>
